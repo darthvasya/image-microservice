@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "image-microservice", "image-microservice\image-microservice.csproj", "{29E07671-402B-40EB-A320-38016AE43AE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image.Model", "Image.Model\Image.Model.csproj", "{C81F252A-5AD4-49E3-B311-7CD57FFC6960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image.DAL", "Image.DAL\Image.DAL.csproj", "{F2C33EF7-3448-4C2F-9967-D0E360524877}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29E07671-402B-40EB-A320-38016AE43AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29E07671-402B-40EB-A320-38016AE43AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29E07671-402B-40EB-A320-38016AE43AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29E07671-402B-40EB-A320-38016AE43AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C81F252A-5AD4-49E3-B311-7CD57FFC6960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81F252A-5AD4-49E3-B311-7CD57FFC6960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81F252A-5AD4-49E3-B311-7CD57FFC6960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C81F252A-5AD4-49E3-B311-7CD57FFC6960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2C33EF7-3448-4C2F-9967-D0E360524877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2C33EF7-3448-4C2F-9967-D0E360524877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2C33EF7-3448-4C2F-9967-D0E360524877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2C33EF7-3448-4C2F-9967-D0E360524877}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
