@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageMicro.Model", "ImageMi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageMicro.DAL", "ImageMicro.DAL\ImageMicro.DAL.csproj", "{DEE958FD-2C5C-40A9-8F18-1FDA18FC7D6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageMicro.Repository", "ImageMicro.Repository\ImageMicro.Repository.csproj", "{B69423D1-73C5-46A9-962D-1CB2C93955FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DEE958FD-2C5C-40A9-8F18-1FDA18FC7D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEE958FD-2C5C-40A9-8F18-1FDA18FC7D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEE958FD-2C5C-40A9-8F18-1FDA18FC7D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69423D1-73C5-46A9-962D-1CB2C93955FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69423D1-73C5-46A9-962D-1CB2C93955FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69423D1-73C5-46A9-962D-1CB2C93955FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69423D1-73C5-46A9-962D-1CB2C93955FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
