@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageMicro.Repository", "Im
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageMicro.Service", "ImageMicro.Service\ImageMicro.Service.csproj", "{4C0E6E9D-CFF8-425E-84F8-EDC3F471E1B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageMicro.API", "ImageMicro.API\ImageMicro.API.csproj", "{C7D77AE7-6833-48C0-8CAD-5D77DB13F688}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4C0E6E9D-CFF8-425E-84F8-EDC3F471E1B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C0E6E9D-CFF8-425E-84F8-EDC3F471E1B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C0E6E9D-CFF8-425E-84F8-EDC3F471E1B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D77AE7-6833-48C0-8CAD-5D77DB13F688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D77AE7-6833-48C0-8CAD-5D77DB13F688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D77AE7-6833-48C0-8CAD-5D77DB13F688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D77AE7-6833-48C0-8CAD-5D77DB13F688}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
