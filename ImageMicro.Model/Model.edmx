@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Image">
           <Key>
             <PropertyRef Name="id" />
@@ -24,22 +24,20 @@
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Image" EntityType="Self.Image" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Images" EntityType="Model.Image" />
-        </EntityContainer>
         <EntityType Name="Image">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="url" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="name_starter" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="size" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name_starter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="date_download" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="deleted" Type="Boolean" Nullable="false" />
           <Property Name="date_delete" Type="DateTime" Precision="7" />
@@ -47,26 +45,29 @@
           <Property Name="height" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="id_owner" Type="Int32" />
         </EntityType>
+        <EntityContainer Name="ImageEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Images" EntityType="Self.Image" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ImageEntities">
           <EntitySetMapping Name="Images">
             <EntityTypeMapping TypeName="Model.Image">
               <MappingFragment StoreEntitySet="Image">
-                <ScalarProperty Name="id_owner" ColumnName="id_owner" />
-                <ScalarProperty Name="height" ColumnName="height" />
-                <ScalarProperty Name="width" ColumnName="width" />
-                <ScalarProperty Name="date_delete" ColumnName="date_delete" />
-                <ScalarProperty Name="deleted" ColumnName="deleted" />
-                <ScalarProperty Name="date_download" ColumnName="date_download" />
-                <ScalarProperty Name="size" ColumnName="size" />
-                <ScalarProperty Name="name_starter" ColumnName="name_starter" />
-                <ScalarProperty Name="url" ColumnName="url" />
-                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="name_starter" ColumnName="name_starter" />
+                <ScalarProperty Name="size" ColumnName="size" />
+                <ScalarProperty Name="date_download" ColumnName="date_download" />
+                <ScalarProperty Name="deleted" ColumnName="deleted" />
+                <ScalarProperty Name="date_delete" ColumnName="date_delete" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="id_owner" ColumnName="id_owner" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Image.Model
+namespace ImageMicro.Model
 {
     using System;
     using System.Collections.Generic;

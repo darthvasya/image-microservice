@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Image.Model;
+using ImageMicro.Model;
 
-namespace Image.DAL.Contracts
+namespace ImageMicro.DAL.Contracts
 {
     public interface IDatabaseFactory : IDisposable
     {
-        Entities Get();  
+        ImageEntities Get();
     }
 }

@@ -5,15 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Data.Entity;
-using Image.DAL.Contracts;
-using Image.Model;
+using ImageMicro.DAL.Contracts;
+using ImageMicro.Model;
 
-
-namespace Image.DAL.Implementations
+namespace ImageMicro.DAL.Implementations
 {
     public abstract class Repository<T> : IRepository<T> where T : class
     {
-        private Entities dataContext;
+        private ImageEntities dataContext;
         private readonly IDbSet<T> dbSet;
 
         protected Repository(IDatabaseFactory databaseFactory)
@@ -28,7 +27,7 @@ namespace Image.DAL.Implementations
             private set;
         }
 
-        protected Entities DataContext
+        protected ImageEntities DataContext
         {
             get { return dataContext ?? (dataContext = DatabaseFactory.Get()); }
         }

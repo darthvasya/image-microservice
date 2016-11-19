@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Image.Model
+namespace ImageMicro.Model
 {
     using System;
     using System.Data.Entity;
@@ -15,10 +15,10 @@ namespace Image.Model
     using System.Data.Entity.Validation;
     using System.Diagnostics;
 
-    public partial class Entities : DbContext
+    public partial class ImageEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public ImageEntities()
+            : base("name=ImageEntities")
         {
         }
     
@@ -26,7 +26,6 @@ namespace Image.Model
         {
             throw new UnintentionalCodeFirstException();
         }
-
         public virtual void Commit()
         {
             try

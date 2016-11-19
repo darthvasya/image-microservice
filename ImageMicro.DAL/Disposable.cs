@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Image.DAL
+namespace ImageMicro.DAL
 {
     public class Disposable : IDisposable
     {

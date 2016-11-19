@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Image.DAL.Contracts;
-using Image.Model;
+using ImageMicro.DAL.Contracts;
+using ImageMicro.Model;
 
-namespace Image.DAL.Implementations
+namespace ImageMicro.DAL.Implementations
 {
     public class DatabaseFactory : Disposable, IDatabaseFactory
     {
-        private Entities dataContext;
-        public Entities Get()
+        private ImageEntities dataContext;
+        public ImageEntities Get()
         {
-            return dataContext ?? (dataContext = new Entities());
+            return dataContext ?? (dataContext = new ImageEntities());
         }
 
         protected override void DisposeCore()

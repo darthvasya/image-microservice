@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Image.DAL.Contracts;
-using Image.Model;
+using ImageMicro.DAL.Contracts;
+using ImageMicro.Model;
 
-namespace Image.DAL.Implementations
+namespace ImageMicro.DAL.Implementations
 {
     public class UnitOfWork : IUnitOfWork
     {
         private readonly IDatabaseFactory databaseFactory;
-        private Entities dataContext;
+        private ImageEntities dataContext;
 
         public UnitOfWork(IDatabaseFactory databaseFactory)
         {
             this.databaseFactory = databaseFactory;
         }
 
-        protected Entities DataContext
+        protected ImageEntities DataContext
         {
             get { return dataContext ?? (dataContext = databaseFactory.Get()); }
         }

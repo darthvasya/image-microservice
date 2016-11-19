@@ -1,5 +1,5 @@
 ﻿
-namespace Image.DAL.Contracts
+namespace ImageMicro.DAL.Contracts
 {
     public interface IUnitOfWork
     {
