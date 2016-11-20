@@ -9,42 +9,45 @@ using System.Web.Http;
 
 namespace ImageMicro.API.Controllers
 {
-    public class ValuesController : ApiController
+    public class ImagesController : ApiController
     {
         private IImageService _imageService;
-        public ValuesController(IImageService image)
+        public ImagesController(IImageService image)
         {
             _imageService = image;
         }
-        // GET api/values
+
+        // GET api/<controller>
         public IEnumerable<Image> Get()
-        {   
+        {
             return _imageService.GetAll();
         }
 
-        // GET api/values/5
-        public string Get(int id)
+        // GET api/<controller>/5
+        public Image Get(int id)
         {
-            Image imageObj = _imageService.GetImage(id);
+            Image image = _imageService.GetImage(id);
 
-            if (imageObj == null)
-                return "errormessage";
-            return imageObj.name;
-
-            return "value";
+            if (image == null)
+                return null;
+            return image;
         }
 
-        // POST api/values
-        public void Post([FromBody]string value)
+        // POST api/<controller>
+
+        //accept: application/json
+        //content-type: application/json
+        public Empty Post([FromBody]Empty value)
         {
+            return value;
         }
 
-        // PUT api/values/5
+        // PUT api/<controller>/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/<controller>/5
         public void Delete(int id)
         {
         }

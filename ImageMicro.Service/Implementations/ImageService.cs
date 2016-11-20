@@ -18,26 +18,50 @@ namespace ImageMicro.Service.Implementations
 
         public ImageService(
                         IUnitOfWork unitOfWork,
-                        IImageRepository userRepository)
+                        IImageRepository imageRepository)
         {
             this._unitOfWork = unitOfWork;
-            this._imageRepository = userRepository;
+            this._imageRepository = imageRepository;
         }
 
         public Image GetImage(int id)
         {
-            Image imageObj = _imageRepository.GetById(id);
+            try
+            {
+                Image imageObj = _imageRepository.GetById(id);
 
-            if (imageObj == null)
+                if (imageObj == null)
+                    return null;
+                return imageObj;
+            }
+            catch (Exception ex)
+            {
                 return null;
-            return imageObj;
+            }
+
         }
 
         public IEnumerable<Image> GetAll()
         {
-            IEnumerable<Image> list = _imageRepository.GetAll();
+            try
+            {
+                IEnumerable<Image> list = _imageRepository.GetAll();
 
-            return list;
+                return list;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+        public Image AddImage(Image image)
+        {
+            if (image == null)
+                return null;
+            _imageRepository.Add(image);
+            return image;
         }
     }
 }
