@@ -26,6 +26,7 @@ namespace ImageMicro.Model
         {
             throw new UnintentionalCodeFirstException();
         }
+
         public virtual void Commit()
         {
             try
@@ -44,6 +45,7 @@ namespace ImageMicro.Model
                 }
             }
         }
+
 
         public virtual DbSet<Image> Images { get; set; }
     }

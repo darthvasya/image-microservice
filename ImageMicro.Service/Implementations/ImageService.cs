@@ -32,5 +32,12 @@ namespace ImageMicro.Service.Implementations
                 return null;
             return imageObj;
         }
+
+        public IEnumerable<Image> GetAll()
+        {
+            IEnumerable<Image> list = _imageRepository.GetAll();
+
+            return list;
+        }
     }
 }

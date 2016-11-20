@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEE958FD-2C5C-40A9-8F18-1FDA18FC7D6B}</ProjectGuid>
+    <ProjectGuid>{E4E0A42E-B7A4-4D1F-B87C-EF4A195D20C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ImageMicro.DAL</RootNamespace>
     <AssemblyName>ImageMicro.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ImageMicro.Model\ImageMicro.Model.csproj">
-      <Project>{13243b72-4cdc-42ef-bd40-13eb059fb1e3}</Project>
+      <Project>{9e19e097-79ce-43b8-b321-459759e58575}</Project>
       <Name>ImageMicro.Model</Name>
     </ProjectReference>
   </ItemGroup>

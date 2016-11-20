@@ -36,8 +36,8 @@ namespace ImageMicro.API
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             GlobalConfiguration.Configuration.Services.Replace(
-                 typeof(IHttpControllerActivator),
-                 new WindsorActivator(this.container));
+             typeof(IHttpControllerActivator),
+             new WindsorActivator(this.container));
         }
     }
 }

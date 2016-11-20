@@ -1,12 +1,11 @@
-﻿using System;
+﻿using ImageMicro.Model;
+using ImageMicro.Service.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
-using ImageMicro.Service.Contracts;
-using ImageMicro.Model;
 
 namespace ImageMicro.API.Controllers
 {
@@ -17,23 +16,22 @@ namespace ImageMicro.API.Controllers
         {
             _imageService = image;
         }
-
         // GET api/values
-        public IEnumerable<string> Get()
-        {
-
-            return new string[] { "value1", "value2" };
+        public IEnumerable<Image> Get()
+        {   
+            return _imageService.GetAll();
         }
-
-
 
         // GET api/values/5
         public string Get(int id)
         {
-            Image img = _imageService.GetImage(id.ToString());
-            if (img != null)
-                return "value: " + img.name + " date: " + img.date_download;
-            return "error: message";
+            Image imageObj = _imageService.GetImage(id.ToString());
+
+            if (imageObj == null)
+                return "errormessage";
+            return imageObj.name;
+
+            return "value";
         }
 
         // POST api/values

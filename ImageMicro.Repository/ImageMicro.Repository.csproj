@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B69423D1-73C5-46A9-962D-1CB2C93955FB}</ProjectGuid>
+    <ProjectGuid>{EE301CC5-75E3-4EA0-A6EB-A86A6B7F19D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ImageMicro.Repository</RootNamespace>
     <AssemblyName>ImageMicro.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,13 +54,17 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ImageMicro.DAL\ImageMicro.DAL.csproj">
-      <Project>{dee958fd-2c5c-40a9-8f18-1fda18fc7d6b}</Project>
+      <Project>{e4e0a42e-b7a4-4d1f-b87c-ef4a195d20c9}</Project>
       <Name>ImageMicro.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\ImageMicro.Model\ImageMicro.Model.csproj">
-      <Project>{13243b72-4cdc-42ef-bd40-13eb059fb1e3}</Project>
+      <Project>{9e19e097-79ce-43b8-b321-459759e58575}</Project>
       <Name>ImageMicro.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

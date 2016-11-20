@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4C0E6E9D-CFF8-425E-84F8-EDC3F471E1B5}</ProjectGuid>
+    <ProjectGuid>{0792F23F-6E2D-4B97-8835-6A69B3A4014E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ImageMicro.Service</RootNamespace>
     <AssemblyName>ImageMicro.Service</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,15 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ImageMicro.DAL\ImageMicro.DAL.csproj">
-      <Project>{dee958fd-2c5c-40a9-8f18-1fda18fc7d6b}</Project>
+      <Project>{e4e0a42e-b7a4-4d1f-b87c-ef4a195d20c9}</Project>
       <Name>ImageMicro.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\ImageMicro.Model\ImageMicro.Model.csproj">
-      <Project>{13243b72-4cdc-42ef-bd40-13eb059fb1e3}</Project>
+      <Project>{9e19e097-79ce-43b8-b321-459759e58575}</Project>
       <Name>ImageMicro.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\ImageMicro.Repository\ImageMicro.Repository.csproj">
-      <Project>{b69423d1-73c5-46a9-962d-1cb2c93955fb}</Project>
+      <Project>{ee301cc5-75e3-4ea0-a6eb-a86a6b7f19d2}</Project>
       <Name>ImageMicro.Repository</Name>
     </ProjectReference>
   </ItemGroup>
