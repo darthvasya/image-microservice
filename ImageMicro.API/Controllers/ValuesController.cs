@@ -25,7 +25,7 @@ namespace ImageMicro.API.Controllers
         // GET api/values/5
         public string Get(int id)
         {
-            Image imageObj = _imageService.GetImage(id.ToString());
+            Image imageObj = _imageService.GetImage(id);
 
             if (imageObj == null)
                 return "errormessage";

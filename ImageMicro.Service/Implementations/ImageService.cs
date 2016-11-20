@@ -24,7 +24,7 @@ namespace ImageMicro.Service.Implementations
             this._imageRepository = userRepository;
         }
 
-        public Image GetImage(string id)
+        public Image GetImage(int id)
         {
             Image imageObj = _imageRepository.GetById(id);
 

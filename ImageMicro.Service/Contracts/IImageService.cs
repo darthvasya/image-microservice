@@ -5,7 +5,7 @@ namespace ImageMicro.Service.Contracts
 {
     public interface IImageService
     {
-        Image GetImage(string id);
+        Image GetImage(int id);
         IEnumerable<Image> GetAll();
     }
 }
